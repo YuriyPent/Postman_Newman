@@ -139,15 +139,15 @@ tests["Body matches string"] = responseBody.has("token");`
     
 `var data = JSON.parse(responseBody);`
 
-`pm.environment.set("id", data[0].a);`
+`pm.environment.set("a", data[0].a);`
 
-`pm.environment.set("assignmentId", data[0].b);`
+`pm.environment.set("b", data[0].b);`
 
-`pm.environment.set("personnelNumber", data[0].c);`
+`pm.environment.set("c", data[0].c);`
 
-`pm.environment.set("officeId", data[0].d);`
+`pm.environment.set("d", data[0].d);`
 
-`pm.environment.set("personId", data[0].e);`
+`pm.environment.set("e", data[0].e);`
 
 `} catch(e) {`
 
