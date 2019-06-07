@@ -71,6 +71,10 @@ console.log("The hostName is: "+hostName);`
 `pm.expect(jsonData.id).to.eql(Number(environment.petId));`
 `});`
 
+`pm.test("Body matches string", function () {`
+    `pm.expect(pm.response.text()).to.include("string_you_want_to_search");`
+`});`
+
 `var a = pm.variables.get("id");
 var jsonData = JSON.parse(responseBody);
 tests["Verify employee_id"] = jsonData.id === a;
