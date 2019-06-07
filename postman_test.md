@@ -66,6 +66,11 @@ console.log("The hostName is: "+hostName);`
     pm.response.to.be.json;
 });`
 
+`pm.test("Correct pet ID is returned", function () {`
+`var jsonData = pm.response.json();`
+`pm.expect(jsonData.id).to.eql(Number(environment.petId));`
+`});`
+
 `var a = pm.variables.get("id");
 var jsonData = JSON.parse(responseBody);
 tests["Verify employee_id"] = jsonData.id === a;
