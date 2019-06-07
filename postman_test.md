@@ -49,9 +49,10 @@ console.log("The hostName is: "+hostName);`
 `console.log(typeof request.method);`
 
 * **Adding assertions**
-`var jsonData = JSON.parse(responseBody);
 
-tests["Correct pet ID is returned"] = jsonData.id == environment.petId;`
+`var jsonData = JSON.parse(responseBody);`
+
+`tests["Correct pet ID is returned"] = jsonData.id == environment.petId;`
 
 `tests["Response time is less than 200ms"] = responseTime < 200;`
 
